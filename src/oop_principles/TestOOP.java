@@ -1,6 +1,7 @@
 package oop_principles;
 
 import oop_principles.encapsulation.Clock;
+import oop_principles.inheritance.Person;
 
 public class TestOOP {
     public static void main(String[] args) {
