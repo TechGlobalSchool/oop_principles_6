@@ -152,7 +152,7 @@ b.method(); // child body
 
 
 
-ABSTACTION:
+ABSTRACTION:
 -Abstraction cannot be achieved without inheritance and it only makes sense when implemented together with inheritance.
 -Abstract classes are completely created for the use of child classes. 
 -Abstract class cannot be instantiated. You CANNOT create objects from abstract classes.
