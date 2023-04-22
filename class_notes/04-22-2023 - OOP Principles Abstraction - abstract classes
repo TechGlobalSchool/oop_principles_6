@@ -241,19 +241,25 @@ class abstract Samsung extends Phone{
 
 
 
-Parent class: Samsung
-
-Child classes: GalaxyS20
 
 
-class GalaxyS20 extends Samsung{
-	
-}
+INTERFACE: 
+-It is another way of achieving abstraction and used for additional functionalities.
+
+MUST HAVE: call(), text(), ring(), calculates()
+The must functions can be designed in an abstract class.
+
+
+takePhoto(), recordVideo(), playMusic(), connectWiFi(), connectBluetooth()
 
 
 
-Create a class called IPhone and extend it to Phone
-Override the abstract methods and provide them meaningful bodies
+
+
+
+
+
+
 
 
 

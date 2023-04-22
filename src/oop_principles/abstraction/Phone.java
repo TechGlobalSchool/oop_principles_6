@@ -11,6 +11,9 @@ public abstract class Phone {
     }
 
     public String color;
+    public String brand;
+    public int memory;
+    public double price;
 
     public abstract void call();
 
