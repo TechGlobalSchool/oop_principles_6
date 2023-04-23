@@ -1,0 +1,203 @@
+
+
+
+04-23-2023 - OOP Principles Abstraction - Interfaces
+
+
+OOP Principles:
+1. Encapsulation: it's making instance variables private and providing public getters and setters to provide better control for them.
+2. Inheritance: creating a parent-child relationship between classes to increase the code reusability. Child can inherit parent's instance variable and most importantly methods. We achieve inheritance with extends keyword.
+3. Abstraction: hiding the implementation but providing the functionality.
+	That means parent class will not provide any method body and child will do through overriding. To achieve, we either create abstract class or interface and have some abstract methods in these abstract classes and interfaces.
+	1. abstract class
+	2. interfaces
+4. Polymorphism: one object in many shapes.
+
+
+Overloading vs overriding
+-Overlpading: 2 methods in the same class with the same name but different arguments
+-Overriding: Happens in the child class and it changes the body of the parent class method
+
+
+
+ABSTRACTION:
+1. abstract class
+- We use abstract keyword to create an abstract class.
+- abstract class makes sense when it has some abstract methods.
+- abstract methods: these are the methods that does not have body.
+	- abstract methods cannot be final.
+	- abstract methods cannot be static.
+	- abstract methods cannot be private.
+- abstract can have both abstract methods and concrete (regular) methods.
+- abstract classes are created to be inherited (for child classes).
+- abstract classes cannot be instantiated. You cannot create objects from abstract classes.
+- HOWEVER, you can have constructors in the abstract classes and these to be used for child classes again.
+- The first class that is not abstract and extends to abstract class MUST implement bodies for all the abstract methods.
+- abstract class cannot be final.
+
+
+abstract class A
+
+abstract class B extends A
+
+abstract class C extends B
+
+class D extends C
+
+In above case, class D MUST implement methods to all abstract methods of class C, B and A.
+
+
+
+
+INTERFACES: 
+- It is another way of achieving abstraction and used to add additional functionality to the classes.
+- one child class can extends to one parent class but one child class class can implement multiple interfaces.
+
+
+
+Interfaces vs abstract classes
+Similarities:
+	-Both are used to achieve abstraction.
+	-Both interface and abstract can have abstract methods to be implemented by child classes.
+	-Both cannot be instantiated. You cannot create objects from abstract classes and interfaces.
+	-Both interfaces and abstract classes can have methods with body. The ones created in the abstract class can have any access modifier. However, the ones in the interfaces are public always and they are created with default keyword.
+	-You can have static methods both in abstract classes and interfaces but these methods cannot be abstract.
+
+Differences:
+	-abstract class is created using abstract and class keywords while interface is created with interface keyword.
+	-abstract methods in abstract classes can take different access modifiers while they are all public in interfaces.
+	-A class can inherit an abstract using extends keyword while it can inherit an interface using implements keyword.
+	-A class can inherit only one class (whether abstract ore regular class) but a class can inherit multiple interfaces. In this case, we use coma to implement multiple interfaces.
+	-Abstract classes can have constructors to be used for child classes but interface cannot have constructor.
+	-You can have any type of instance variables in the abstract classes but you can have only public static final instance variables in interfaces.
+	-One class can extend to one class only while one interface can extend to multiple interfaces.
+
+
+
+Is multiple inheritance possible in Java?
+-With classes, it is not possible as one class can extend to one parent only. SINGLE INHERITANCE.
+-With interfaces, it is possible for a class to implement multiple interfaces. MULTIPLE INHERITANCE.
+
+
+
+
+Create an interface called as Camera
+create 2 abstract methods called as takePhoto and recordVideo()
+Go to Samsung and IPhone classes and implement Camera interface in these classes
+
+Create an interface called as Bluetooth
+Create one abstract method called as connectBluetooth
+Implement that interface for Samsung and IPhone classes 
+
+
+
+
+
+WiFi, Camera, Bluetooth
+
+public interface Bluetooth{
+	public abstract void connectBluetooth();
+}
+
+
+public interface Camera{
+	public abstract void takePhoto();
+	public abstract void recordVideo();
+}
+
+public interface WiFi{
+	public abstract void connectWiFi();
+}
+
+public class Samsung extends Phone implements WiFi, Camera, Bluetooth{
+	
+	@Override
+	public void text(){
+		// body
+	}
+
+	@Override
+	public void call(){
+		// body
+	}
+
+	@Override
+	public void connectBluetooth(){
+		// body
+	}
+
+	@Override
+	public void takePhoto(){
+		// body
+	}
+
+	@Override
+	public void recordVideo(){
+		// body
+	}
+
+	@Override
+	public void connectWiFi(){
+		// body
+	}
+} 
+
+
+
+public class Nokia extends Phone{
+	
+	@Override
+	public void text(){
+		// body
+	}
+
+	@Override
+	public void call(){
+		// body
+	}
+} 
+
+
+
+public class IPhone extends Phone{
+	
+	@Override
+	public void text(){
+		// body
+	}
+
+	@Override
+	public void call(){
+		// body
+	}
+} 
+
+
+
+
+Can one interface inherit from other interfaces?
+-YES
+
+interface I{
+	
+}
+
+interface J extends I, K, M{
+	
+}
+
+
+class A{
+	
+}
+
+
+class B extends A{
+	
+}
+
+
+
+
+
+

@@ -21,6 +21,7 @@ public class TestAbstraction {
         i1.ring(); // IPhone rings
         n1.ring(); // Phone rings
 
-
+        i1.connectWifi();
+        s1.connectWifi();
     }
 }

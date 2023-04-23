@@ -1,6 +1,6 @@
 package oop_principles.abstraction;
 
-public abstract class Phone {
+public abstract class Phone{
 
     public Phone(){
 
@@ -21,5 +21,10 @@ public abstract class Phone {
 
     public void ring(){
         System.out.println("Phone rings");
+    }
+
+
+    private void someMethod(){
+
     }
 }
