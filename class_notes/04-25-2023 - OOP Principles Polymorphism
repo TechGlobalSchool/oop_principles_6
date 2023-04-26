@@ -1,0 +1,95 @@
+
+
+
+04-25-2023 - OOP Principles Polymorphism
+
+
+OOP Principles
+	1. Encapsulation: private instance variables and public getters and setters
+	2. Inheritance: code reusability with super class and sub class concept (extends)
+	3. Abstraction: hiding implementation with abstract methods whether within abstract classes or interfaces
+	4. Polymorphism: one object in many shapes
+
+
+abstract method: a method that does not have body and we can have in abstract classes and interfaces
+
+abstract class: this is a class created to define what their sub classes will do with the abstract methods. Abstract class is used for the MUST functionalities of the sub classes.
+
+interface: is created to define what their sub classes will do with the abstract methods but these functionalities will be considered as OPTIONAL/ADDITIONAL features.
+
+NOTE: Abstract classes are primarily used for objects that are closely related, whereas interfaces are best for providing a common functionality to unrelated classes
+
+
+Abstract class vs Interface
+Similarities:
+	-They are both used for the abstraction
+	-Both can be used for inheritance
+	-Both cannot be instantiated meaning we cannot create object of abstract classes and interfaces
+	-Both can have regular static methods
+	-Both can have abstract methods
+	-Both can have methods which have body but the one in the interface is created with default keyword
+	-Both are meaningful when used with inheritance and polymorphism is inevitable as a result of both
+	-Both of abstract class and interface cannot be final
+
+
+Differences:
+	-we can use extends keyword for class while we use implements keyword for interfaces
+	-class keyword is used for abstract class while interface is used for interfaces creation
+	-a class can extend to a class while a class can implement many interfaces
+	-we can have ONLY public static final instance variables in interfaces while we can have any type of instance variables in am abstract class
+	-Abstract class can be used for SINGLE INHERITANCE while interface can be used for MULTIPLE INHERITANCE
+	-One class can implements many interfaces while one interface can extend to many interfaces
+	-Abstract class can have constructor while interface cannot
+	-Abstract class can have default/protected/public abstract methods while all the abstract methods in interfaces are public in interfaces
+	-Everything in interfaces are public by default while we can decide the accessibility of the class members in abstract classes
+	-Abstract or regular class can implement one or more interfaces while interfaces cannot inherit from classes
+
+
+
+
+class Animal{
+	
+}
+
+
+class Cat extends Animal{
+	
+}
+
+Cat is a Cat
+Cat is an Animal
+
+Cat cat1 = new Cat();
+Animal cat2 = new Cat();
+
+Animal is a parent of Cat
+
+
+ArrayList<String> names1 = new ArrayList<>();
+List<ArrayList> names2 = new ArrayList<>();
+Object names3 = new ArrayList<>();
+
+
+List is a parent of ArrayList
+
+
+class ClassA extends ClassB implements I1, I2, I3{
+	
+}
+
+
+
+ClassA parents are : ClassB, I1, I2, I3, Object
+5+
+
+
+Reference(Stack) 			Object(Heap)
+Animal a 		 		 = 	new Animal();
+ArrayList<String> names1 = 	new ArrayList<>();
+
+
+
+
+
+
+
